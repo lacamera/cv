@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{if .lang}}{{.lang}}{{else}}en{{end}}">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<title>{{.name}}</title>
+<style>
+html {
+  line-height: 1.5;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  color: #1a1a1a;
+  background-color: #fdfdfd;
+}
+body {
+ margin: 0 auto;
+ max-width: 36em;
+ padding-left: 50px;
+ padding-right: 50px;
+ padding-top: 50px;
+ padding-bottom: 50px;
+ hyphens: auto;
+ overflow-wrap: break-word;
+ text-rendering: optimizeLegibility;
+ font-kerning: normal;
+}
+p {margin: 1em 0;}
+a {color: #1a1a1a;}
+a:visited {color: #1a1a1a;}
+img {max-width: 100%;}
+h1, h2, h3, h4, h5, h6 {margin-top: 1.4em;}
+ol, ul {
+ padding-left: 1.7em;
+ margin-top: 1em;
+}
+li > ol, li > ul {margin-top: 0;}
+blockquote {
+  margin: 1em 0 1em 1.7em;
+  padding-left: 1em;
+  border-left: 2px solid #e6e6e6;
+  color: #606060;
+}
+hr {
+  background-color: #1a1a1a;
+  border: none;
+  height: 1px;
+  margin: 1em 0;
+}
+header {
+ margin-bottom: 4em;
+ text-align: center;
+}
+</style>
+</head>
+<body>
+<code>
+<div>
+  <h1 style="margin-bottom: 0;">{{.name}}</h1>
+  <div style="margin: 0;">
+    <a href="mailto:{{.mail}}">{{.mail}}</a>
+    <a href="https://{{.web}}">{{.web}}</a>
+    <p>{{.desc}}</p>
+  </div>
+</div>
+
+<h2>{{if .i18n.experience}}{{.i18n.experience}}{{else}}Experience{{end}}</h2>
+{{ range .experience }}
+<div style="margin-top: 1rem;">
+  <div style="float: right;">{{.from}} - {{if .to}}{{.to}}{{else}}{{if $.i18n.present}}{{$.i18n.present}}{{else}}Present{{end}}{{end}}</div>
+  <div><strong>{{.role}}</strong><div>
+  <div>{{.name}} ({{.location}})</div>
+  <ul style="margin: 0;">
+  {{range .details}}
+    <li>{{- . -}}</li>
+  {{end}}
+  </ul>
+</div>
+{{end}}
+
+<h2>{{if .i18n.education}}{{.i18n.education}}{{else}}Education{{end}}</h2>
+{{ range .education }}
+<div style="margin-top: 1rem;">
+  <div style="float: right;">{{.from}} - {{if .to}}{{.to}}{{else}}{{if $.i18n.present}}{{$.i18n.present}}{{else}}Present{{end}}{{end}}</div>
+  <div><strong>{{.name}}</strong>, {{.degree}}<div>
+  <div>{{.institution}} ({{.location}})</div>
+</div>
+{{end}}
+
+<h2>{{if .i18n.languages}}{{.i18n.languages}}{{else}}Languages{{end}}</h2>
+<ul>
+{{ range $n,$v := .languages -}}
+  <li>{{$v}}</li>
+{{ end -}}
+</ul>
+</code>
+</body>
+</html>
