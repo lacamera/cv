@@ -1,0 +1,34 @@
+name: Francesco La Camera
+web: lacamera.org
+mail: fm@lacamera.org
+desc: Entry-level Software and Infrastructure Developer
+education:
+  - name: Computer Science
+    degree: B.Sc.
+    institution: Westphalian University
+    location: Gelsenkirchen
+    from: 10/2020
+
+  - name: Information Technology
+    degree: FHR
+    institution: Berufskolleg
+    location: Dinslaken, DE
+    from: 09/2018
+    to: 05/2020
+
+experience:
+  - name: notesum
+    role: Software Developer
+    location: Remote, NL
+    from: 10/2022
+
+  - name: GFO Kliniken
+    role: IT Specialist Intern
+    location: Dinslaken, DE
+    from: 08/2020
+    to: 11/2020
+
+languages:
+  - German (native)
+  - English (C1)
+  - Spanish, Italian (B2)

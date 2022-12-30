@@ -1,0 +1,44 @@
+name: Francesco La Camera
+web: lacamera.org
+mail: fm@lacamera.org
+lang: de
+desc: Entry-level Software und Infrastruktur Entwickler
+
+# internationalization
+i18n:
+  education: Ausbildung
+  languages: Sprachen
+  experience: Erfahrungen
+  present: Heute
+
+education:
+  - name: Informatik
+    degree: B.Sc.
+    institution: Westfälische Hochschule
+    location: Gelsenkirchen
+    from: 10/2020
+
+  - name: Informatik
+    degree: FHR
+    institution: Berufskolleg
+    location: Dinslaken
+    from: 09/2018
+    to: 05/2020
+
+experience:
+  - name: notesum
+    role: Werkstudent Software Entwickler
+    location: Remote, NL
+    from: 10/2022
+    details:
+
+  - name: GFO Kliniken
+    role: Praktikum Systemintegration
+    location: Dinslaken
+    from: 08/2020
+    to: 11/2020
+
+languages:
+  - Deutsch (Muttersprache)
+  - Englisch (C1)
+  - Spanisch, Italienisch (B2)
