@@ -1,6 +1,8 @@
 package main
 
 import (
+	"flag"
+	"fmt"
 	"html/template"
 	"log"
 	"os"
@@ -9,27 +11,36 @@ import (
 )
 
 func main() {
-	data := map[string]interface{}{}
-	buf, err := os.ReadFile("data.yaml")
+	var output string
+	var data string
+	flag.StringVar(&output, "o", "resume.html", "")
+	flag.StringVar(&data, "c", "resume.yaml", "")
+	flag.Parse()
+	tmpl := os.Args[len(os.Args)-1]
+
+	values := map[string]interface{}{}
+	byt, err := os.ReadFile(data)
 	if err != nil {
 		log.Fatal(err)
 	}
-	err = yaml.Unmarshal(buf, &data)
+	err = yaml.Unmarshal(byt, &values)
 	if err != nil {
 		log.Fatal(err)
 	}
-	byt, err := os.ReadFile("resume.tmpl")
+
+	byt, err = os.ReadFile(tmpl)
 	if err != nil {
 		log.Fatal(err)
 	}
-	f, err := os.Create("resume.html")
+	fmt.Println(output)
+	f, err := os.Create(output)
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer f.Close()
 
 	t := template.Must(template.New("").Parse(string(byt)))
-	err = t.Execute(f, data)
+	err = t.Execute(f, values)
 	if err != nil {
 		log.Fatal(err)
 	}
