@@ -2,6 +2,7 @@ name: Francesco La Camera
 web: lacamera.org
 mail: fm@lacamera.org
 desc: Entry-level Software and Infrastructure Developer
+
 education:
   - name: Computer Science
     degree: B.Sc.
@@ -27,6 +28,11 @@ experience:
     location: Dinslaken, DE
     from: 08/2020
     to: 11/2020
+
+skills:
+  - UNIX/Linux Systems Administration
+  - Cloud Native Computing (DevOps)
+  - Software Design and Development
 
 languages:
   - German (native)

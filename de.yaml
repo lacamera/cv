@@ -4,13 +4,6 @@ mail: fm@lacamera.org
 lang: de
 desc: Entry-level Software und Infrastruktur Entwickler
 
-# internationalization
-i18n:
-  education: Ausbildung
-  languages: Sprachen
-  experience: Erfahrungen
-  present: Heute
-
 education:
   - name: Informatik
     degree: B.Sc.
@@ -38,7 +31,19 @@ experience:
     from: 08/2020
     to: 11/2020
 
+skills:
+  - UNIX/Linux Systemadministration
+  - Cloud Native Entwiclung (DevOps)
+  - Software Design und Entwicklung
+
 languages:
   - Deutsch (Muttersprache)
   - Englisch (C1)
   - Spanisch, Italienisch (B2)
+
+i18n:
+  education: Ausbildung
+  languages: Sprachen
+  experience: Erfahrungen
+  present: Heute
+  skills: Fähigkeiten
