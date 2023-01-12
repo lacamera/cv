@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"html/template"
 	"log"
 	"os"
@@ -32,7 +31,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(output)
 	f, err := os.Create(output)
 	if err != nil {
 		log.Fatal(err)

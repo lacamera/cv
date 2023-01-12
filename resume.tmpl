@@ -86,6 +86,13 @@ header {
 </div>
 {{end}}
 
+<h2>{{if .i18n.skills}}{{.i18n.skills}}{{else}}Skills{{end}}</h2>
+<ul>
+{{ range $n,$v := .skills -}}
+  <li>{{$v}}</li>
+{{ end -}}
+</ul>
+
 <h2>{{if .i18n.languages}}{{.i18n.languages}}{{else}}Languages{{end}}</h2>
 <ul>
 {{ range $n,$v := .languages -}}
