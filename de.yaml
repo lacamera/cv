@@ -11,7 +11,7 @@ education:
     location: Gelsenkirchen
     from: 10/2020
 
-  - name: Informatik
+  - name: Informationstechnik
     degree: FHR
     institution: Berufskolleg
     location: Dinslaken
@@ -19,9 +19,9 @@ education:
     to: 05/2020
 
 experience:
-  - name: notesum
-    role: Werkstudent Software Entwickler
-    location: Remote, NL
+  - name: cosmonote
+    role: Software Engineer (Stipendiat)
+    location: Remote
     from: 10/2022
     details:
 
@@ -31,8 +31,19 @@ experience:
     from: 08/2020
     to: 11/2020
 
+volunteer:
+  - name: AStA Westfälische Hochschule
+    role: EDV Referent
+    location: Gelsenkirchen
+    from: 02/2023
+
+  - name: Westfälische Hochschule FB3
+    role: Mitglied QV-Komission
+    location: Gelsenkirchen
+    from: 03/2023
+
 skills:
-  - UNIX/Linux Systemadministration
+  - UNIX/Linux/MS Systemadministration
   - Cloud Native Entwicklung (DevOps)
   - Software Design und Entwicklung
 
@@ -47,3 +58,4 @@ i18n:
   experience: Erfahrungen
   present: Heute
   skills: Fähigkeiten
+  volunteer: Ehrenamt

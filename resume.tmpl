@@ -6,19 +6,19 @@
 <title>{{.name}}</title>
 <style>
 html {
-  line-height: 1.5;
+  line-height: 1.2;
   font-family: Georgia, serif;
-  font-size: 20px;
+  font-size: 16px;
   color: #1a1a1a;
   background-color: #fdfdfd;
 }
 body {
  margin: 0 auto;
  max-width: 36em;
- padding-left: 50px;
- padding-right: 50px;
- padding-top: 50px;
- padding-bottom: 50px;
+ padding-left: 24px;
+ padding-right: 24px;
+ padding-top: 24px;
+ padding-bottom: 24px;
  hyphens: auto;
  overflow-wrap: break-word;
  text-rendering: optimizeLegibility;
@@ -28,9 +28,8 @@ p {margin: 1em 0;}
 a {color: #1a1a1a;}
 a:visited {color: #1a1a1a;}
 img {max-width: 100%;}
-h1, h2, h3, h4, h5, h6 {margin-top: 1.4em;}
 ol, ul {
- padding-left: 1.7em;
+ padding-left: 1.2em;
  margin-top: 1em;
 }
 li > ol, li > ul {margin-top: 0;}
@@ -58,7 +57,7 @@ header {
   <h1 style="margin-bottom: 0;">{{.name}}</h1>
   <div style="margin: 0;">
     <a href="mailto:{{.mail}}">{{.mail}}</a>
-    <a href="https://{{.web}}">{{.web}}</a>
+    <a href="https://www.linkedin.com/in/francescolacamera">in/francescolacamera</a>
     <p>{{.desc}}</p>
   </div>
 </div>
@@ -83,6 +82,21 @@ header {
   <div style="float: right;">{{.from}} - {{if .to}}{{.to}}{{else}}{{if $.i18n.present}}{{$.i18n.present}}{{else}}Present{{end}}{{end}}</div>
   <div><strong>{{.name}}</strong>, {{.degree}}<div>
   <div>{{.institution}} ({{.location}})</div>
+</div>
+{{end}}
+
+
+<h2>{{if .i18n.volunteer}}{{.i18n.volunteer}}{{else}}Volunteer{{end}}</h2>
+{{ range .volunteer }}
+<div style="margin-top: 1rem;">
+  <div style="float: right;">{{.from}} - {{if .to}}{{.to}}{{else}}{{if $.i18n.present}}{{$.i18n.present}}{{else}}Present{{end}}{{end}}</div>
+  <div><strong>{{.role}}</strong><div>
+  <div>{{.name}} ({{.location}})</div>
+  <ul style="margin: 0;">
+  {{range .details}}
+    <li>{{- . -}}</li>
+  {{end}}
+  </ul>
 </div>
 {{end}}
 
